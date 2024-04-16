@@ -9,9 +9,9 @@ submit.onclick = () => {
   let y = inputY.value
   let value = inputUser.value
   field.innerHTML = ``
-  if(+x + +y <=64){
+  if(+x + +y <=63){
     if(value.length < 6){
-      if(+x - +y <=Math.abs(32) ){
+      {
         for (let i = 0; i < x; i++ ){
           for (let j = 0; j < y; j++){
             field.innerHTML += `${value} `
@@ -20,9 +20,6 @@ submit.onclick = () => {
   
         field.innerHTML +=`<br>`
         }
-      }
-      else{
-        alert('слишком хреновая(не пропорциональная) матрица она ломает блоки')
       }
     }
     else{
